@@ -1,0 +1,80 @@
+﻿@model Fashion.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+   Layout = "_AdminLayout";
+}
+
+<h1>Edit</h1>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl1" class="control-label"></label>
+                <input asp-for="ImageUrl1" class="form-control" />
+                <span asp-validation-for="ImageUrl1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl2" class="control-label"></label>
+                <input asp-for="ImageUrl2" class="form-control" />
+                <span asp-validation-for="ImageUrl2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl3" class="control-label"></label>
+                <input asp-for="ImageUrl3" class="form-control" />
+                <span asp-validation-for="ImageUrl3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LongDescription" class="control-label"></label>
+                <input asp-for="LongDescription" class="form-control" />
+                <span asp-validation-for="LongDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsPreferred" /> @Html.DisplayNameFor(model => model.IsPreferred)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrandId" class="control-label"></label>
+                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.BrandId"></select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubSubCategoryId" class="control-label"></label>
+                <select asp-for="SubSubCategoryId" class="form-control" asp-items="ViewBag.SubSubCategoryId"></select>
+                <span asp-validation-for="SubSubCategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

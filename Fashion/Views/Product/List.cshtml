@@ -1,0 +1,158 @@
+﻿@model ProductListViewModel
+
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "_Layout";
+}
+
+
+<partial name="_HomeCarousel" />
+
+
+
+
+
+
+
+
+
+ 
+    <!--Main layout-->
+    <main class="mt-4 mb-5">
+      <div class="container-fluid">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-10 mb-4">
+     @*<div id="categories" class="col-xs-3 float-left"> 
+ @await Component.InvokeAsync("NavigationMenu")
+ </div> *@
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarCenteredExample"
+      aria-controls="navbarCenteredExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarCenteredExample"
+    >
+      <!-- Left links -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+           Kids
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "
+            >Accessories</a
+          >
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+ <div class="row  ">
+@foreach (Product item in Model.Products)
+{
+    @await Html.PartialAsync("ProductSummary",item)
+}
+
+
+ 
+ </div>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-2 mb-2">
+            <!--Section: Sidebar-->
+            <section class="sticky-top" style="top: 80px;">
+              <!--Section: Ad-->
+               <section class="text-center border-bottom pb-4 mb-4">
+                <div class="bg-image hover-overlay ripple mb-4">
+                  <img
+                    src="https://www.dropbox.com/s/t1r10hxw8vv3srt/AQUA%20VIEW%205.jpg?dl=1"
+                    class="img-fluid"
+                  />
+                 
+                </div>
+                <h5></h5>
+
+                <p>
+                 If you're interested in contacting us, reach out.
+                </p>
+                <a
+                  role="button"
+                  class="btn btn-primary"
+                  asp-controller="Contact" asp-action="Index"
+                  
+                  >Contact Us <i class="fas fa-phone"></i
+                ></a>
+              </section>
+
+              <!--Section: Video-->
+              <section class="text-center">
+                <h5 class="mb-4">Learn about us</h5>
+
+                <div class="embed-responsive embed-responsive-16by9 shadow-4-strong">
+                  <iframe
+                    class="embed-responsive-item rounded"
+                    src="https://www.youtube.com/embed/c9B4TPnak1A"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </section>
+              <!--Section: Video-->
+            </section>
+            <!--Section: Sidebar-->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+    </main>

@@ -1,0 +1,96 @@
+﻿<link  rel="stylesheet" href="~/css/ContactForm.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section id="contact">
+  <h2 class="pb-2 border-bottom text-center text-white " style="font-family:Pacifico;">Contact Us</h2>
+  
+  
+  <div class="contact-wrapper">
+  
+  <!-- Left contact page --> 
+    
+     <div class="col-10">
+                     @if (ViewBag.Message == null)
+            {
+                    <form  method="post" >
+            <div class="form-group">
+              <label for="Name">Name</label>
+                            <input for="Name" class="form-control" />
+                            
+            </div>
+            <div class="form-group">
+               <label for="Email">Email</label>
+                            <input for="Email" class="form-control" />
+                            
+            </div>
+              <div class="form-group">
+                            <label for="Subject">Subject</label>
+                            <input for="Subject" class="form-control" />
+                            
+                        </div>
+          
+            <div class="form-group">
+              <label for="Message">Message</label>
+                            <textarea rows="10" cols="25" 
+                       for="Message" class="form-control"></textarea>
+                           
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="Send message">
+            </div>
+            </form>
+         
+          }
+           <div>
+                @if (ViewBag.Message != null)
+            {
+                    <div class="text-center text-primary align-content-center"><h4>@ViewBag.Message</h4></div>
+
+
+                }
+            </div>
+           </div>
+    
+  <!-- Left contact page --> 
+    
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+          
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+          
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+          
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-codepen" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </li>       
+        </ul>
+        <hr>
+
+        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+      </div>
+    
+  </div>
+  
+</section>  
+  
+  

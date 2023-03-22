@@ -1,0 +1,53 @@
+﻿
+
+
+
+.container-heading {
+    text-align: center;
+    color: #262f68;
+    font-size: 25px;
+    margin: 50px 0%;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.item-icon {
+    width: 50px;
+    height: 50px;
+    padding: 5%;
+    border-radius: 25px;
+}
+
+#map-icon {
+    background-color: #ffe6df;
+}
+
+#coin-icon {
+    background-color: #dff0fe;
+}
+
+#comparison-icon {
+    background-color: #fcf3df;
+}
+
+#laptop-icon {
+    background-color: #eff2ff;
+}
+
+.item-details {
+    font-size: 17px;
+    text-align: center;
+    color: #7980a3;
+}
